@@ -39,12 +39,42 @@ class Strings {
 		//}else {
 		//	System.out.println("no");
 		//}	
-		String a = "abdest";
-		if (isAbecedarian(a)) {
+		String a = "aabbddeesstt";
+		if (isDupledrome(a) ) {
 			System.out.println("yay");
 		}else{
 			System.out.println("noooooooooooooœ my cabbages");
 		}
+	}
+	//http://www.greenteapress.com/thinkapjava/html/thinkjava010.html#toc80
+	//http://docs.oracle.com/javase/6/docs/api/java/lang/String.html
+	public static String captainCrunch(String s){
+		String result = "";
+
+		for (int i =0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			char coded = c + 13;
+
+			result = result + coded;
+
+		}
+		System.out.println(result);
+		return result;
+	}
+
+	public static boolean isDupledrome(String s){
+		char lastLetter = 'z';
+		for (int i = 0; i<s.length(); i++) {
+			//System.out.println(s.charAt(i));
+			if (i%2 == 0) {
+				lastLetter = s.charAt(i);
+			}else{
+				if (!(lastLetter == s.charAt(i))) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 
 	public static boolean isAbecedarian(String s){
@@ -54,7 +84,7 @@ class Strings {
 		}
 		lastLetter = s.charAt(0);
 		for (int i = 0; i<s.length();i++ ) {
-			System.out.println(s.charAt(i));
+			//System.out.println(s.charAt(i));
 			if (s.charAt(i) >= lastLetter) {
 				lastLetter = s.charAt(i);
 			}else {
