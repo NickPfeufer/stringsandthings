@@ -13,7 +13,7 @@ class Multi {
 		int[][] b = {{4, 5},{7,8}};
 		print(b);
 		System.out.println(determinant(b));
-		System.out.println("-----------");
+		System.out.println("-----------_");
 		print(snakeDraft(10, 4));
 	}
 
