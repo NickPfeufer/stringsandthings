@@ -13,6 +13,16 @@ class stats{
 			}
 		}
 		return maximum;
+	}
+
+	public static int min(int[] a){
+		int minimum = a[0];
+		for (int i = 0; i<a.length; i++) {
+			if (minimum > a[i]) {
+				minimum = a[i];
+			}
+		}
+		return minimum;		
 	} 
 
 }
