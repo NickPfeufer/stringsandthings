@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class stats{
 	
 	public static void main(String[] args) {
@@ -29,12 +31,26 @@ class stats{
 	}
 
 	public static int mean(int[] a){
-		int mean = 0;
+		double mean = 0.0;
 		for (int i = 0; i<a.length; i++) {
 			mean += a[i];
 		}
 		mean /= a.length;
 		return mean;
+	}
+
+	public static int median(int[] a){
+		int[] x = new int[a.length];
+		for (int i = 0; i<a.length; i++) {
+			x[i] = a[i];
+		}
+		Arrays.sort(x);
+		if (x.length%2 == 0) {
+			return (x[x.length/2] + x[x.length/2-1])/2;
+		}else{
+			return x[(x.length-1)/2];
+		}
+
 	} 
 
 }
