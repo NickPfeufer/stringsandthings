@@ -11,6 +11,7 @@ class stats{
 		System.out.println(mean(m));
 		System.out.println(median(a));
 		System.out.println(median(o));
+		System.out.println(quatile1(o));
 	}
 
 	public static int max(int[] a){
