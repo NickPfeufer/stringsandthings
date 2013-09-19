@@ -3,6 +3,7 @@ class stats{
 	public static void main(String[] args) {
 		int[] a = {5,2,5,8,12,253,0,-2,-6,-3};
 		System.out.println(max(a));
+		System.out.println(min(a));
 	}
 
 	public static int max(int[] a){
