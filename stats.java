@@ -5,7 +5,7 @@ class stats{
 		int[] m = {5, 5, 5, 5, 5};
 		System.out.println(max(a));
 		System.out.println(min(a));
-		System.out.println();
+		System.out.println(mean(m));
 	}
 
 	public static int max(int[] a){
