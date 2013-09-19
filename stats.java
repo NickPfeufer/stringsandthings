@@ -5,9 +5,12 @@ class stats{
 	public static void main(String[] args) {
 		int[] a = {5,2,5,8,12,253,0,-2,-6,-3};
 		int[] m = {5, 5, 5, 5, 5};
+		int[] o = {4,3,2,5,1};
 		System.out.println(max(a));
 		System.out.println(min(a));
 		System.out.println(mean(m));
+		System.out.println(median(a));
+		System.out.println(median(o));
 	}
 
 	public static int max(int[] a){
@@ -30,7 +33,7 @@ class stats{
 		return minimum;		
 	}
 
-	public static int mean(int[] a){
+	public static double mean(int[] a){
 		double mean = 0.0;
 		for (int i = 0; i<a.length; i++) {
 			mean += a[i];
