@@ -56,4 +56,24 @@ class stats{
 
 	} 
 
+	public static int quatile1(int[] a){
+		int[] x = new int[a.length];
+		int median;
+		for (int i = 0; i<a.length; i++) {
+			x[i] = a[i];
+		}
+		Arrays.sort(x);
+		if (x.length%2 == 0) {
+			median = x.length/2;
+		}else{
+			median = (x.length-1)/2;
+		}
+		int[] quatile = new int[median+1];
+		for (int i = 0; i<quatile.length; i++) {
+			quatile[i] = x[i];
+		}
+		return median(quatile);
+
+	}
+
 }
