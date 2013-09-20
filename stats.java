@@ -13,6 +13,7 @@ class stats{
 		System.out.println(median(o));
 		System.out.println(quatile1(o));
 		System.out.println(quatile3(o));
+		System.out.println(mode(a));
 		//quartile3 mode standard deviation
 	}
 
@@ -96,5 +97,23 @@ class stats{
 		}
 		return median(quatile);
 	}
+	public static int mode(int[] a){
+		int curentMode = a[0];
+		int oldcount = 0;
+		int newcount;
+		for (int i = 0; i<a.length; i++) {
+			newcount = 0;
+			for (int j = 0; j<a.length; j++) {
+				if (a[i] == a[j]) {
+					newcount++;
+				}
+			}
+			if (newcount > oldcount) {
+				oldcount = newcount;
+				curentMode = a[i];
+			}
+		}
+		return curentMode;
 
+	}
 }
