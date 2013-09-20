@@ -12,6 +12,8 @@ class stats{
 		System.out.println(median(a));
 		System.out.println(median(o));
 		System.out.println(quatile1(o));
+		System.out.println(quatile3(o));
+		//quartile3 mode standard deviation
 	}
 
 	public static int max(int[] a){
@@ -75,6 +77,24 @@ class stats{
 		}
 		return median(quatile);
 
+	}
+	public static int quatile3(int[] a){
+		int[] x = new int[a.length];
+		int median;
+		for (int i = 0; i<a.length; i++) {
+			x[i] = a[i];
+		}
+		Arrays.sort(x);
+		if (x.length%2 == 0) {
+			median = x.length/2;
+		}else{
+			median = (x.length-1)/2;
+		}
+		int[] quatile = new int[x.length-median];
+		for (int i = 0; i<quatile.length; i++) {
+			quatile[i]=x[median + 1];
+		}
+		return median(quatile);
 	}
 
 }
