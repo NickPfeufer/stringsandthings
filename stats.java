@@ -4,6 +4,7 @@ class stats{
 	
 	public static void main(String[] args) {
 		int[] a = {5,2,5,8,12,253,0,-2,-6,-3};
+		int[] b = {2,5,7,1,7,2,7,3,4,7,2,7,8,92,7};
 		int[] m = {5, 5, 5, 5, 5};
 		int[] o = {4,3,2,5,1};
 		System.out.println(max(a));
@@ -14,6 +15,7 @@ class stats{
 		System.out.println(quatile1(o));
 		System.out.println(quatile3(o));
 		System.out.println(mode(a));
+		System.out.println(mode(b));
 		//quartile3 mode standard deviation
 	}
 
